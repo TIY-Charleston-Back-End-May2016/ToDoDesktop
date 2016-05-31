@@ -37,8 +37,7 @@ public class Controller implements Initializable {
         ToDoItem item = (ToDoItem) model.getSelectedItem();
         if (item == null) {
             item.isDone = !item.isDone;
-            list.setItems(null);
-            list.setItems(items);
+            list.refresh();
         }
     }
 
